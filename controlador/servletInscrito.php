@@ -107,7 +107,8 @@ class servletInscrito extends controladorComandos{
 				/*////////////////////////////////////////////////////////////////*/
 				/*////////////////////MARKETING///////////////////////*/
 				$data['ctipcap']=trim($_POST['ctipcap']);
-				$data['cvended']='';
+                $data['cvended']='';
+				$data['cvended_detalle']='';
 				$data['cmedpre']='';
 				$data['destica']='';
 				
@@ -116,6 +117,7 @@ class servletInscrito extends controladorComandos{
 					}
 					elseif(trim($_POST['dclacap'])=='2'){
 					$data['cvended']=trim($_POST['id_cvended_jqgrid']);
+                    $data['cvended_detalle']=trim($_POST['id_cvended_detalle']);
 					}
 					elseif(trim($_POST['dclacap'])=='3'){
 					$data['cmedpre']=trim($_POST['medio_prensa']); //codigo de prensa

@@ -697,6 +697,10 @@
                                     </a>
                                 </span>
                             </td>
+                            <td class="ui-state-default"><span class="t-rojo">*</span>Detalle:</td>
+                            <td>
+                                <input type="text" id="id_cvended_detalle" class="input-large">
+                            </td>
                         </tr>
                         <tr id="mantenimiento_jqgrid_vended" style="display:none">
                         	<td colspan="2">

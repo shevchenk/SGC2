@@ -255,8 +255,8 @@ $codigopago="C";
 			
 			
 		$sqlinsmat="INSERT INTO conmatp 
-(cconmat,fmatric,cingalu,testmat,nnomina,cgruaca,cgracan,fusuari,cusuari,tgrupo,testalu,titptra,tforpag,cpromot,cfilial,sermatr,dproeco)
-VALUES('".$cconmat."','".$data['finscri']."','".$cingalu."','1','','".$cgruaca."','',now(),'".$data['cusuari']."','2','".$data['testalu']."','I','C','".$data['cvended']."','".$data['locestu']."','".$data['sermatr']."','".$data['dproeco']."')";
+(cconmat,fmatric,cingalu,testmat,nnomina,cgruaca,cgracan,fusuari,cusuari,tgrupo,testalu,titptra,tforpag,cpromot,cpromotd,cfilial,sermatr,dproeco)
+VALUES('".$cconmat."','".$data['finscri']."','".$cingalu."','1','','".$cgruaca."','',now(),'".$data['cusuari']."','2','".$data['testalu']."','I','C','".$data['cvended']."','".$data['cvended_detalle']."','".$data['locestu']."','".$data['sermatr']."','".$data['dproeco']."')";
 		$db->setQuery($sqlinsmat);
 			if(!$db->executeQuery()){
 				$db->rollbackTransaccion();
