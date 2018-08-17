@@ -106,6 +106,7 @@ $sql="SELECT DISTINCT
 		,ifnull(deu_real_pen.monto,0) As deu_real_pen
 		,t.dtipcap
 		,t.dclacap
+		,c.cpromotd
 		,concat(ve.dapepat,' ',ve.dapemat,', ',ve.dnombre) recepcionista
 		,If(i.cpromot!='',(Select concat(v.dapepat,' ',v.dapemat,', ',v.dnombre,' | ',v.codintv) From vendedm v Where v.cvended=i.cpromot),
 			If(i.cmedpre!='',(Select m.dmedpre From medprea m Where m.cmedpre=i.cmedpre limit 1),
@@ -321,7 +322,7 @@ $objPHPExcel->getActiveSheet()->getStyle('A3')->getFont()->setSize(15);
 $objPHPExcel->getActiveSheet()->mergeCells('A3:B3');
 $objPHPExcel->getActiveSheet()->getStyle('A3')->applyFromArray($styleAlignmentRight);
 
-$cabecera=array('N°','CAJA - ODE-CENT. DE CAPTACIÓN','CAJERO QUE INSCRIBE','FICHA DE  MATRICULA ','LIBRO DE CODIGO','ESTADO','APELL PATERNO','APELL MATERNO','NOMBRES','TEL FIJO / CELULAR','CORREO ELECTRÓNICO','CARRERA','CICLO ACADEMICO','INICIO','FECHA DE INICIO','INSTITUCION','FREC','HORARIO','LOCAL DE ESTUDIOS','INSCRIPCION','MATRIC','PENSION','MATRIC','PENSION','DEUDA TOTAL','MEDIO CAPTACION','RESPONSABLE CAPTACION','TIPO CAPTACION','CODIGO RESPONSABLE CAPTACION','RECEPCIONISTA','FECHA MATRIC','FECHA DIGITACION');
+$cabecera=array('N°','CAJA - ODE-CENT. DE CAPTACIÓN','CAJERO QUE INSCRIBE','FICHA DE  MATRICULA ','LIBRO DE CODIGO','ESTADO','APELL PATERNO','APELL MATERNO','NOMBRES','TEL FIJO / CELULAR','CORREO ELECTRÓNICO','CARRERA','CICLO ACADEMICO','INICIO','FECHA DE INICIO','INSTITUCION','FREC','HORARIO','LOCAL DE ESTUDIOS','INSCRIPCION','MATRIC','PENSION','MATRIC','PENSION','DEUDA TOTAL','MEDIO CAPTACION','RESPONSABLE CAPTACION','TIPO CAPTACION','CODIGO RESPONSABLE CAPTACION','DETALLE','RECEPCIONISTA','FECHA MATRIC','FECHA DIGITACION');
 
     array_push($cabecera,'GENERO');
     array_push($cabecera,'TIPO DOCUMENTO');
@@ -382,6 +383,9 @@ $objPHPExcel->getActiveSheet()->mergeCells($az[$pos].'4:'.$az[$pos].'5');$pos+=1
 $objPHPExcel->getActiveSheet()->setCellValue($az[$pos]."4","CODIGO RESPONSABLE CAPTACION");
 $objPHPExcel->getActiveSheet()->mergeCells($az[$pos].'4:'.$az[$pos].'5');
 $objPHPExcel->getActiveSheet()->getStyle($az[$pos].'4:'.$az[$pos].'5')->getAlignment()->setWrapText(true);$pos+=1;
+
+$objPHPExcel->getActiveSheet()->setCellValue($az[$pos]."4","DETALLE");
+$objPHPExcel->getActiveSheet()->mergeCells($az[$pos].'4:'.$az[$pos].'5');$pos+=1;
 
 $objPHPExcel->getActiveSheet()->setCellValue($az[$pos]."4","RECEPCIONISTA");
 $objPHPExcel->getActiveSheet()->mergeCells($az[$pos].'4:'.$az[$pos].'5');$pos+=1;
@@ -452,6 +456,7 @@ $objPHPExcel->getActiveSheet()->setCellValue($az[$paz].$valorinicial,$dclacap);$
 		$objPHPExcel->getActiveSheet()->setCellValue($az[$paz].$valorinicial,$detcap[1]);$paz++;
 	}
 
+$objPHPExcel->getActiveSheet()->setCellValue($az[$paz].$valorinicial,$r['cpromotd']);$paz++;
 $objPHPExcel->getActiveSheet()->setCellValue($az[$paz].$valorinicial,$r['recepcionista']);$paz++;
 $objPHPExcel->getActiveSheet()->setCellValue($az[$paz].$valorinicial,$r['fmatric']);$paz++;
 $objPHPExcel->getActiveSheet()->setCellValue($az[$paz].$valorinicial,$r['fusuari']);$paz++;
