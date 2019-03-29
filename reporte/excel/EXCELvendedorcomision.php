@@ -182,6 +182,8 @@ $sql3="SELECT dinstit
         ORDER BY dinstit";
 $cn->setQuery($sql3);
 $rpt3=$cn->loadObjectList();
+
+dd($sql);
 //echo $sql;
 /*
 echo count($control)."-";
