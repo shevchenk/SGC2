@@ -101,9 +101,11 @@ $sql3="SELECT dinstit FROM instita  WHERE cinstit IN ('$cinstit') ORDER BY dinst
 $cn->setQuery($sql3);
 $rpt3=$cn->loadObjectList();
 
+dd($sql);
+
 date_default_timezone_set('America/Lima');
 
-require_once 'includes/Classes/PHPExcel.php';
+require_once 'includes/Classes/PHPExcel2.php';
 
 $styleThinBlackBorderOutline = array(
     'borders' => array(
