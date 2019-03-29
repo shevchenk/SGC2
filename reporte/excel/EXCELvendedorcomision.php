@@ -183,11 +183,6 @@ $sql3="SELECT dinstit
 $cn->setQuery($sql3);
 $rpt3=$cn->loadObjectList();
 
-echo count($control);
-echo '<hr>';
-echo $sql;
-echo '<hr>';
-exit(0);
 date_default_timezone_set('America/Lima');
 require_once 'includes/Classes/PHPExcel.php';
 $styleThinBlackBorderOutline = array(
@@ -293,12 +288,8 @@ return $styleColorFunction;
 }
 $objPHPExcel = new PHPExcel();
 $objPHPExcel->getProperties()->setCreator("Jorge Salcedo")
-                             ->setLastModifiedBy("Jorge Salcedo")
-                             ->setTitle("Office 2007 XLSX Test Document")
-                             ->setSubject("Office 2007 XLSX Test Document")
-                             ->setDescription("Test document for Office 2007 XLSX, generated using PHP classes.")
-                             ->setKeywords("office 2007 openxml php")
-                             ->setCategory("Test result file");
+               ->setSubject("Com Ven");
+
 $objPHPExcel->getDefaultStyle()->getFont()->setName('Bookman Old Style');
 $objPHPExcel->getDefaultStyle()->getFont()->setSize(8);
 $objPHPExcel->getActiveSheet()->getPageSetup()->setOrientation(PHPExcel_Worksheet_PageSetup::ORIENTATION_LANDSCAPE);
