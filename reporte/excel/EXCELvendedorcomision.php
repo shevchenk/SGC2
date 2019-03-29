@@ -183,12 +183,11 @@ $sql3="SELECT dinstit
 $cn->setQuery($sql3);
 $rpt3=$cn->loadObjectList();
 
-dd($sql);
-//echo $sql;
-/*
-echo count($control)."-";
+echo count($control);
+echo '<hr>';
 echo $sql;
-*///exit($sql);
+echo '<hr>';
+exit(0);
 date_default_timezone_set('America/Lima');
 require_once 'includes/Classes/PHPExcel.php';
 $styleThinBlackBorderOutline = array(
