@@ -184,7 +184,7 @@ $cn->setQuery($sql3);
 $rpt3=$cn->loadObjectList();
 
 date_default_timezone_set('America/Lima');
-require_once 'includes/Classes/PHPExcel.php';
+require_once 'includes/Classes2/PHPExcel.php';
 $styleThinBlackBorderOutline = array(
     'borders' => array(
         'outline' => array(
