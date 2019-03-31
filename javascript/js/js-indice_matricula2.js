@@ -36,7 +36,7 @@ Exportar=function(){
         sistema.msjAdvertencia("Ingrese Fecha Fin",2000);
         $("#txt_fecha_fin").focus();
     }else{
-	window.location='../reporte/excel/EXCELindicematriculaG.php?cfilial='+$("#slct_filial").val().join(",")
+	window.location='../reporte/excel/EXCELindicematriculaG2.php?cfilial='+$("#slct_filial").val().join(",")
                     +'&fechini='+$("#txt_fecha_inicio").val()+'&fechfin='+$("#txt_fecha_fin").val()
                     +'&cinstit='+$("#slct_instituto").val().join(",")+'&usuario='+$("#hd_idUsuario").val();
     }
