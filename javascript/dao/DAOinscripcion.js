@@ -127,6 +127,7 @@ var inscripcionDAO={
 				medio_prensa:$('#slct_medio_prensa').val().split("|")[0],
 				id_cvended_jqgrid:$('#id_cvended_jqgrid').val(),
 				id_cvended_detalle:$('#id_cvended_detalle').val(),
+				id_cvended_medio_digital:$('#id_cvended_medio_digital').val(),
 				/*id_cvended_p:$('#id_cvended_p').val(),				
 				id_cvended_t:$('#id_cvended_t').val(),
 				id_cvended_w:$('#id_cvended_w').val(),

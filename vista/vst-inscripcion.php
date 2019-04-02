@@ -701,6 +701,10 @@
                             <td>
                                 <input type="text" id="id_cvended_detalle" class="input-large">
                             </td>
+                            <td class="ui-state-default"><span class="t-rojo">*</span>Medio Digital:</td>
+                            <td>
+                                <input type="text" id="id_cvended_medio_digital" class="input-large">
+                            </td>
                         </tr>
                         <tr id="mantenimiento_jqgrid_vended" style="display:none">
                         	<td colspan="2">

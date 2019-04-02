@@ -1043,6 +1043,7 @@ $("#txt_promocion_economica").val("Sin Promoción");
 $("#validatotal").attr("disabled","true");
 $("#cciclo").val("01");
 $("#txt_docum_vali").val("");
+$("#id_cvended_medio_digital,#id_cvended_detalle").val("");
 $("#valida_pago_convalidacion").css("display","none");
 $("#valida_proceso_convalidacion").css("display","none");
 }
