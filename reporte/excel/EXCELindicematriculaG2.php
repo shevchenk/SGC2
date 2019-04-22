@@ -433,10 +433,12 @@ $objPHPExcel->getActiveSheet()->getStyle('A4:AK'.$valorinicial)->applyFromArray(
 //$objPHPExcel->getActiveSheet()->getStyle('AA4:AA'.$valorinicial)->getNumberFormat()->setFormatCode(PHPExcel_Style_NumberFormat::FORMAT_PERCENTAGE);
 ////////////////////////////////////////////////////////////////////////////////////////////////
 $valorinicial++;
+$valorinicial++;
 $objPHPExcel->getActiveSheet()->getRowDimension($valorinicial)->setRowHeight(25.25); // altura
     $objPHPExcel->getActiveSheet()->setCellValue("I".$valorinicial,"TOTALES");
     $objPHPExcel->getActiveSheet()->getStyle('I'.$valorinicial.":"."AK".$valorinicial)->applyFromArray($styleAlignmentRight);
-    $objPHPExcel->getActiveSheet()->getStyle("A".$valorinicial.":"."AK".$valorinicial)->getFill()->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setARGB('FFD8E4BC');
+    $objPHPExcel->getActiveSheet()->getStyle("I".$valorinicial.":"."AK".$valorinicial)->getFill()->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setARGB('FFD8E4BC');
+    $objPHPExcel->getActiveSheet()->getStyle("I".$valorinicial.":"."AK".$valorinicial)->applyFromArray($styleThinBlackBorderAllborders);
     
     $col=9;
         $objPHPExcel->getActiveSheet()->setCellValue($az[$col].$valorinicial,"=".$az[$col].implode($sumatotal,'+'.$az[$col])); $col++;
