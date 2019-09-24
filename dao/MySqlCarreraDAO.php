@@ -722,7 +722,7 @@ class MySqlCarreraDAO{
 		if(count($data)>0){
 			return array('rst'=>'2','msj'=>"El modulo ya ha sido registrado Anteriormente",'sql'=>$sql);exit();
         }else{
-			$sqlcod="SELECT RIGHT(CONCAT('000',CONVERT( IFNULL(MAX(cmodulo),'0')+1, CHAR)),3) As cmodulo
+			$sqlcod="SELECT RIGHT(CONCAT('0000',CONVERT( IFNULL(MAX(cmodulo*1),'0')+1, CHAR)),4) As cmodulo
 					 FROM moduloa";
 			$db->setQuery($sqlcod);
 			$cmodulo=$db->loadObjectList();
