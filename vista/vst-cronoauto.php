@@ -53,6 +53,10 @@
                                     <option value="2018-3">2018-3</option>
                                     <option value="2019-1">2019-1</option>
                                     <option value="2019-2">2019-2</option>
+                                    <option value="2019-3">2019-3</option>
+                                    <option value="2020-1">2020-1</option>
+                                    <option value="2020-2">2020-2</option>
+                                    <option value="2020-3">2020-3</option>
                                 </select>
                             </div>
                             
