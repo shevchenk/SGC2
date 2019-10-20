@@ -953,7 +953,7 @@ class MySqlCarreraDAO{
 					$codcarrer=$datalimpia[0];
 					
 				}elseif($imprime==""){
-					$sqlver1="SELECT right(concat('000',(max(ccarrer)+1)),3) as ccarrer
+					$sqlver1="SELECT right(concat('0000',(max(ccarrer)+1)),4) as ccarrer
 							  FROM carrerm";
 					$db->setQuery($sqlver1);
 					$ccarrer=$db->loadObjectList();
